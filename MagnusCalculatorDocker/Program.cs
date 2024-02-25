@@ -43,7 +43,7 @@ class Program
 
                 string operation = Console.ReadLine();
 
-                string connectionString = "Server=localhost;Port=3306;Database=myDB;User ID=root;Password=;";
+                string connectionString = Environment.GetEnvironmentVariable("MYSQL_CONNECTION_STRING");
                 using (MySqlConnection connection = new MySqlConnection(connectionString))
 
                 {
