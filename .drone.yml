@@ -17,8 +17,10 @@ steps:
     image: boulundeasv/dotnet-sdk-with-java
     enviroment:
       SONARSECRET:
-        from_secret: 
+        from_secret: SonarCubeSecret
+      SONARKEY:
+        from_secret: SonarCubeKey
     commands:
-      - dotnet sonarscanner begin /k:"easv-devops_MagnusSonarProj_AY2yRBSFEVvRW2O60D-f" /d:sonar.host.url="http://sonar.setgo.dk:9000"  /d:sonar.token="sqp_0c95ab8d5d9f2813975596febdd00b2c01bf5f1c"
+      - dotnet sonarscanner begin /k:"$SONARKEY" /d:sonar.host.url="http://sonar.setgo.dk:9000"  /d:sonar.token="$SONARSECRET"
       - dotnet build
-      - dotnet sonarscanner end /d:sonar.token="sqp_0c95ab8d5d9f2813975596febdd00b2c01bf5f1c"
+      - dotnet sonarscanner end /d:sonar.token="$SONARSECRET"
