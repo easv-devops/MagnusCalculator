@@ -1,0 +1,24 @@
+# This is a generated file. Not intended for manual editing.
+version: "3"
+services:
+  calculator-app:
+    build:
+      context: "C:\\Users\\MadMe\\RiderProjects\\MagnusCalculatorDocker\\MagnusCalculatorDocker"
+      dockerfile: "Dockerfile"
+      target: "base"
+    command: []
+    entrypoint:
+    - "dotnet"
+    - "/app/bin/Debug/net8.0/MagnusCalculatorDocker.dll"
+    environment:
+      DOTNET_ENVIRONMENT: "Development"
+      DOTNET_USE_POLLING_FILE_WATCHER: "true"
+      NUGET_PACKAGES: "C:\\Users\\MadMe\\.nuget\\packages"
+      NUGET_FALLBACK_PACKAGES: "C:\\Users\\MadMe\\.nuget\\packages"
+    image: "magnuscalculatordocker:dev"
+    ports: []
+    volumes:
+    - "C:\\Users\\MadMe\\.nuget\\packages:/root/.nuget/fallbackpackages"
+    - "C:\\Users\\MadMe\\RiderProjects\\MagnusCalculatorDocker\\MagnusCalculatorDocker:/app:rw"
+    - "C:\\Users\\MadMe\\RiderProjects\\MagnusCalculatorDocker:/src:rw"
+    working_dir: "/app"

@@ -1,0 +1,13 @@
+version: "3"
+services:
+  calculator-db:
+    image: mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=password
+      - MYSQL_DATABASE=myDB
+  calculator-app:
+    build: .
+    stdin_open: true
+    tty: true
+    depends_on:
+    - calculator-db
