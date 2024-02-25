@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "hYXTQTMyUzS0ts2AG7j2vgZ8iLH3P7P7jGJXfbLviMOsNRSidRP+FrnEFJTH0+NSrhjL2cAlLwOy2C5Dy2pwoQ==",
+  "dgSpecHash": "jYo9Ez6DWOEbf7+ERrSZajBCV7jT8uJ+sAsmyK9DT+mc9maA9BPDvF1La55Cwxv9FjyHzQwUKPMd+cfDgC7DDw==",
   "success": true,
   "projectFilePath": "C:\\Users\\MadMe\\RiderProjects\\MagnusCalculatorDocker\\CalculatorTest\\CalculatorTest.csproj",
   "expectedPackageFiles": [
@@ -55,10 +55,10 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Package 'MySQLConnection 1.0.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0'. This package may not be fully compatible with your project.",
+      "message": "Package 'MySQLConnection 1.0.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net7.0'. This package may not be fully compatible with your project.",
       "libraryId": "MySQLConnection",
       "targetGraphs": [
-        "net8.0"
+        "net7.0"
       ]
     }
   ]
