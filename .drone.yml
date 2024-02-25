@@ -15,7 +15,7 @@ steps:
         
   - name: code-analysis
     image: boulundeasv/dotnet-sdk-with-java
-    enviroment:
+    environment:
       SONARSECRET:
         from_secret: SonarCubeSecret
       SONARKEY:
