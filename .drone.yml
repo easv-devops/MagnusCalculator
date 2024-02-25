@@ -20,7 +20,10 @@ steps:
         from_secret: SonarCubeSecret
       SONARKEY:
         from_secret: SonarCubeKey
+      MYSQL_CONNECTION_STRING:
+        from_secret: mysql_conn
     commands:
       - dotnet sonarscanner begin /k:"$SONARKEY" /d:sonar.host.url="http://sonar.setgo.dk:9000"  /d:sonar.token="$SONARSECRET"
       - dotnet build
       - dotnet sonarscanner end /d:sonar.token="$SONARSECRET"
+      - dotnet run --connection-string="$MYSQL_CONNECTION_STRING"
